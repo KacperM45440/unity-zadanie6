@@ -1,2 +1,2 @@
-# unity-zadanie6
-Studia - Unity 1 - Behaviour tree
+# Zadanie 6
+Stwórz podstawowy projekt unity który wykorzystywałby State Machine lub Behaviour Tree.
