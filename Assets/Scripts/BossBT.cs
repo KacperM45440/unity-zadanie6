@@ -10,7 +10,7 @@ public class BossBT : BehaviorTree.Tree
     public static float speed = 2f;
     public static float waitTime = 3f;
     public static float fovRange = 3f;
-    public static float attackRange = 1f;
+    public static float attackRange = 1.25f;
     protected override Node SetupTree()
     {
         Node root = new Selector(new List<Node>

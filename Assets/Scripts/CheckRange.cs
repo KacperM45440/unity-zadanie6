@@ -17,20 +17,17 @@ public class CheckRange : Node
 
     public override NodeState Evaluate()
     {
-        object t = GetData("target");
+        Transform t = (Transform)GetData("target");
         if (t == null)
         {
             state = NodeState.FAILURE;
             return state;
         }
 
-        Transform target = (Transform)t;
-        if (Vector3.Distance(_transform.position, target.position) <= BossBT.attackRange)
+        if (Vector3.Distance(_transform.position, t.position) <= BossBT.attackRange)
         {
             _animator.SetBool("Walking", false);
             _animator.SetBool("Attacking", true);
-
-
             state = NodeState.SUCCESS;
             return state;
         }
